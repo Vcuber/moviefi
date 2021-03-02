@@ -16,7 +16,12 @@ function App() {
   const [favourites, setFavourites] = useState([]);
 
 
-  const getMovieRequest = async (searchData) => {
+  const getMovieRequest =  (searchData) => {
+
+    var delayms = 2000;
+
+    setTimeout(async function() {
+
     const url = `https://www.omdbapi.com/?s=${searchData}&apikey=fba40dba`
 
     try {
@@ -30,6 +35,7 @@ function App() {
     catch(e) {
       console.log(e);
     }
+  }, delayms);
   };
 
   useEffect(() => {
