@@ -21,15 +21,15 @@ function App() {
 
     try {
       const response = await fetch(url);
-    const respJson = await response.json();
+      const respJson = await response.json();
     
-    if(respJson.Search) {
-      setMovies(respJson.Search);
+      if(respJson.Search) {
+        setMovies(respJson.Search);
+      }
     }
-  }
-  catch(e) {
-    console.log(e);
-  }
+    catch(e) {
+      console.log(e);
+    }
   };
 
   useEffect(() => {
