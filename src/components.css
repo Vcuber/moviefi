@@ -13,7 +13,7 @@
 }
  .container {
 	 position: absolute;
-	 margin: auto;
+	 margin: 0 auto auto auto;
 	 top: 0;
 	 left: 0;
 	 right: 0;
