@@ -43,10 +43,16 @@ function App() {
   }, [])
 
   const addFavourite = (movie) => {
-    console.log(favourites, movie);
-    const newFavouriteList = [...favourites, movie];
-    setFavourites(newFavouriteList);
-    saveToLocalStorage(newFavouriteList);
+    if(favourites == null) {
+      setFavourites([movie]);
+      saveToLocalStorage([movie]);
+    }
+    else {
+      const newFavouriteList = [...favourites, movie];
+      setFavourites(newFavouriteList);
+      saveToLocalStorage(newFavouriteList);
+    }
+    
   }
 
   const removeFavourites = (movie) => {
