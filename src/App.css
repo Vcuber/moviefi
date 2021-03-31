@@ -1,0 +1,56 @@
+.movie-app {
+    color: crimson;
+}
+
+.movie-app > .row {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+}
+
+.movie-app > .row::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(224, 54, 54, 0.3);
+	background-color: #F5F5F5;
+}
+
+.movie-app > .row::-webkit-scrollbar
+{
+	width: 6px;
+	background-color: #080808;
+}
+
+.movie-app > .row::-webkit-scrollbar-thumb
+{
+	background-color: crimson;
+}
+
+.image-container {
+    position: relative;
+    transition: transform 0.2s;
+    background: rgb(36, 35, 35);
+}
+
+.image-container:hover {
+    cursor: pointer;
+    transform: scale(1.01);
+}
+
+.overlay {
+    position: absolute;
+    background: rgb(0, 0, 0, 0.8);
+    width: 100%;
+    transition: 0.5 ease;
+    opacity: 0;
+    bottom: 0;
+    font-size: 20px;
+    padding: 20px;
+    text-align: center;
+}
+
+.image-container:hover .overlay {
+    opacity: 1;
+}
+
+.navbar {
+    width: fit-content;
+}
